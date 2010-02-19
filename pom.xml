@@ -6,7 +6,15 @@
   <packaging>jar</packaging>
   <version>2.3.7</version>
   <name>base64</name>
-  <url>http://maven.apache.org</url>
+  <url>http://iharder.sourceforge.net/current/java/base64/</url>
+  <description>A Java class providing very fast Base64 encoding and decoding 
+               in the form of convenience methods and input/output streams.
+  </description>
+  <licenses>
+    <license>
+      <name>Public domain</name>
+    </license>
+  </licenses>
   <build>
     <plugins>
       <plugin>
@@ -28,4 +36,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.1.2</version>
+        <configuration>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.6.1</version>
+        <configuration>
+          <show>public</show>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
