@@ -6,7 +6,7 @@
   <packaging>jar</packaging>
   <version>2.3.7</version>
   <name>base64</name>
-  <url>http://iharder.sourceforge.net/current/java/base64/</url>
+  <url>http://iharder.net/base64/</url>
   <description>A Java class providing very fast Base64 encoding and decoding 
                in the form of convenience methods and input/output streams.
   </description>
@@ -30,8 +30,8 @@
     <developer>
       <id>rharder</id>
       <name>Robert Harder</name>
-      <email>robertharder@mac.com</email>
-      <url>http://phd.iharder.net/</url>
+      <email>rob@iharder.net</email>
+      <url>http://iharder.net/</url>
       <timezone>-8</timezone>
     </developer>
     <developer>
