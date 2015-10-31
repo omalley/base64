@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.iharder</groupId>
   <artifactId>base64</artifactId>
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
   <version>2.3.8</version>
   <name>base64</name>
   <url>http://iharder.net/base64/</url>
@@ -58,6 +58,13 @@
           <source>1.6</source>
           <target>1.6</target>
         </configuration>
+      </plugin>
+
+      <!-- generate an OSGi bundle -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
       </plugin>
 
       <!-- make a jar with the source code -->
