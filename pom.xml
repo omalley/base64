@@ -3,7 +3,7 @@
   <groupId>net.iharder</groupId>
   <artifactId>base64</artifactId>
   <packaging>bundle</packaging>
-  <version>2.3.9-SNAPSHOT</version>
+  <version>2.3.10-SNAPSHOT</version>
   <name>base64</name>
   <url>http://iharder.net/base64/</url>
   <description>A Java class providing very fast Base64 encoding and decoding 

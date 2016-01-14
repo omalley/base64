@@ -1,1 +1,25 @@
 This is a mavenization of the Base64 project from iHarder.net.
+
+To do a release:
+
+1. mvn versions:set -DnewVersion=2.3.99
+2. git commit -a
+3. git tag release-2.3.99
+4. create ~/.m2/settings.xml with:
+
+<settings>
+  <servers>
+    <server>
+      <id>sonatype-nexus-staging</id>
+      <username>MY-ACCOUNT</username>
+      <password>MY-PASSWORD<password>
+    </server>
+  </servers>
+</settings>
+
+5. mvn -Prelease-sign-artifacts deploy
+6. go to https://oss.sonatype.org and find the staging artifact.
+7. close the artifact
+8. release the artifact
+9. mvn versions:set -DnewVersion=2.3.100-SNAPSHOT
+10. git commit -a
