@@ -1,5 +1,6 @@
 package net.iharder;
 
+import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
@@ -25,7 +26,9 @@ public class Base64Test extends TestCase
         byte[] data = createData(length);
         ByteArrayOutputStream out_bytes = new ByteArrayOutputStream();
         OutputStream out = new Base64.OutputStream(out_bytes);
-        out.write(data);
+        BufferedOutputStream bos = new BufferedOutputStream(out);
+        bos.write(data);
+        bos.close();
         out.close();
         byte[] encoded = out_bytes.toByteArray();
         byte[] decoded = Base64.decode(encoded, 0, encoded.length, 

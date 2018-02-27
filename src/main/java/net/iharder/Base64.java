@@ -2020,6 +2020,11 @@ public class Base64
          */
         @Override
         public void close() throws java.io.IOException {
+            // 0.  If the stream is already closed then invoking this method has no effect.
+            if (out == null) {
+                return;
+            }
+
             // 1. Ensure that pending characters are written
             flushBase64();
 
